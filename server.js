@@ -6,10 +6,12 @@ const chatRoutes = require("./routes/chatRoutes");
 const messageRoutes = require("./routes/messageRoutes");
 const { notFound, errorHandler } = require("./middleware/errorMiddleware");
 const path = require("path");
+var cors = require("cors");
 
 dotenv.config();
 connectDB();
 const app = express();
+app.use(cors());
 app.use(function (req, res, next) {
   res.setHeader("Access-Control-Allow-Origin", "*");
   next();
