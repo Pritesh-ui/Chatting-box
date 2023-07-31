@@ -4,7 +4,7 @@ const colors = require("colors");
 const connectDB = async () => {
   try {
     const conn = await mongoose.connect(
-      "mongodb+srv://pritesh:<password>@cluster0.yqox1rp.mongodb.net/?retryWrites=true&w=majority",
+      "mongodb+srv://pritesh:1234@cluster0.yqox1rp.mongodb.net/?retryWrites=true&w=majority",
       {
         useNewUrlParser: true,
         useUnifiedTopology: true,
